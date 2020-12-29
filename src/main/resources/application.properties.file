@@ -1,2 +1,26 @@
 spring.security.oauth2.client.registration.google.client-id="your client-id from google api console"
 spring.security.oauth2.client.registration.google.client-secret="your client-secret from google api console"
+
+spring.thymeleaf.cache=false
+
+# ===============================
+# DATABASE CONNECTION
+# ===============================
+
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+spring.datasource.username=postgres
+spring.datasource.password=d244224d
+
+# ===============================
+# JPA / HIBERNATE
+# ===============================
+
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
+
+# Fix Postgres JPA Error:
+# Method org.postgresql.jdbc.PgConnection.createClob() is not yet implemented.
+spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults=false
